@@ -1,18 +1,119 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"> </script>
-     <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+    <meta charset="utf-8" />
+    <title>Snowman World</title>
+    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
   </head>
+
   <body>
     <a-scene>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      <a-plane position="0 0.1 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <!-- <a-sky color="#ECECEC"></a-sky> -->
-      <!-- the enviroment entity includes a sky. Choose from the presets"none, default, contact, egypt, checkerboard, forest, goaland, yavapai, goldmine, threetowers, poison, arches, tron, japan, dream, volcano, starry, osiris, moon" -->
-      <a-entity environment="preset: forest; dressingAmount: 500"></a-entity>
+      <!-- Japan environment -->
+      <a-entity environment="preset: japan; dressingAmount: 200; groundColor: #ffffff; grid: none"></a-entity>
+
+      <!-- Camera -->
+      <a-entity position="0 1.6 4">
+        <a-camera></a-camera>
+      </a-entity>
+
+      <!-- Snow ground -->
+      <a-plane
+        position="0 0 -4"
+        rotation="-90 0 0"
+        width="30"
+        height="30"
+        color="#ffffff">
+      </a-plane>
+
+      <!-- Snowman bottom -->
+      <a-sphere
+        position="0 0.8 -4"
+        radius="0.9"
+        color="#ffffff">
+      </a-sphere>
+
+      <!-- Snowman middle -->
+      <a-sphere
+        position="0 2 -4"
+        radius="0.65"
+        color="#ffffff">
+      </a-sphere>
+
+      <!-- Snowman head -->
+      <a-sphere
+        position="0 2.95 -4"
+        radius="0.45"
+        color="#ffffff">
+      </a-sphere>
+
+      <!-- Eyes -->
+      <a-sphere position="-0.12 3.05 -3.58" radius="0.04" color="#111111"></a-sphere>
+      <a-sphere position="0.12 3.05 -3.58" radius="0.04" color="#111111"></a-sphere>
+
+      <!-- Nose -->
+      <a-cone
+        position="0 2.92 -3.5"
+        radius-bottom="0.05"
+        radius-top="0.01"
+        height="0.3"
+        rotation="90 0 0"
+        color="#ff7f24">
+      </a-cone>
+
+      <!-- Mouth -->
+      <a-sphere position="-0.12 2.82 -3.6" radius="0.02" color="#111111"></a-sphere>
+      <a-sphere position="-0.05 2.76 -3.58" radius="0.02" color="#111111"></a-sphere>
+      <a-sphere position="0 2.74 -3.57" radius="0.02" color="#111111"></a-sphere>
+      <a-sphere position="0.05 2.76 -3.58" radius="0.02" color="#111111"></a-sphere>
+      <a-sphere position="0.12 2.82 -3.6" radius="0.02" color="#111111"></a-sphere>
+
+      <!-- Buttons -->
+      <a-sphere position="0 2.15 -3.35" radius="0.05" color="#111111"></a-sphere>
+      <a-sphere position="0 1.95 -3.38" radius="0.05" color="#111111"></a-sphere>
+      <a-sphere position="0 1.75 -3.42" radius="0.05" color="#111111"></a-sphere>
+
+      <!-- Left arm -->
+      <a-cylinder
+        position="-0.95 2.05 -4"
+        radius="0.04"
+        height="1.4"
+        rotation="0 0 60"
+        color="#8b5a2b">
+      </a-cylinder>
+
+      <!-- Right arm -->
+      <a-cylinder
+        position="0.95 2.05 -4"
+        radius="0.04"
+        height="1.4"
+        rotation="0 0 -60"
+        color="#8b5a2b">
+      </a-cylinder>
+
+      <!-- Top hat brim -->
+      <a-cylinder
+        position="0 3.28 -4"
+        radius="0.38"
+        height="0.05"
+        color="#111111">
+      </a-cylinder>
+
+      <!-- Top hat -->
+      <a-cylinder
+        position="0 3.55 -4"
+        radius="0.24"
+        height="0.5"
+        color="#111111">
+      </a-cylinder>
+
+      <!-- Hat band -->
+      <a-cylinder
+        position="0 3.43 -3.99"
+        radius="0.245"
+        height="0.08"
+        color="#cc0000">
+      </a-cylinder>
     </a-scene>
   </body>
 </html>
