@@ -8,6 +8,7 @@
     <a-scene>
 
       <a-assets>
+        <img id="chessroom" src="chessroom.jpg">
         <a-asset-item id="KING" src="KING.obj"></a-asset-item>
         <a-asset-item id="QUEEN" src="QUEEN.obj"></a-asset-item>
         <a-asset-item id="Knight" src="Knight.obj"></a-asset-item>
@@ -16,9 +17,8 @@
         <a-asset-item id="PAWN" src="PAWN.obj"></a-asset-item>
       </a-assets>
 
-      <a-sky color="#dbeeff"></a-sky>
-      <a-light type="ambient" color="#888"></a-light>
-      <a-light type="point" intensity="1.2" position="2 8 4"></a-light>
+      <a-sky src="#chessroom"></a-sky>
+      
       
       <a-entity position="0 8 14" rotation="-30 0 0">
         <a-camera></a-camera>
