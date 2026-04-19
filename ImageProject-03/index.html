@@ -8,12 +8,12 @@
     <a-scene>
 
       <a-assets>
-        <img id="KING" src="assets/KING.obj"></a-asset-item>
-        <img id="QUEEN" src="assets/QUEEN.obj"></a-asset-item>
-        <img id="Knight" src="assets/Knight.obj"></a-asset-item>
-        <img id="bishop" src="assets/bishop.obj"></a-asset-item>
-        <img id="ROOK" src="assets/ROOK.obj"></a-asset-item>
-        <img id="PAWN" src="assets/PAWN.obj"></a-asset-item>
+        <a-asset-item id="KING" src="KING.obj"></a-asset-item>
+        <a-asset-item id="QUEEN" src="QUEEN.obj"></a-asset-item>
+        <a-asset-item id="Knight" src="Knight.obj"></a-asset-item>
+        <a-asset-item id="bishop" src="bishop.obj"></a-asset-item>
+        <a-asset-item id="ROOK" src="ROOK.obj"></a-asset-item>
+        <a-asset-item id="PAWN" src="PAWN.obj"></a-asset-item>
       </a-assets>
 
       <a-sky color="#dbeeff"></a-sky>
@@ -110,9 +110,15 @@
       <!-- BOARD END -->
 
       <!-- PIECES -->
+
        <!-- White -->
+
     <!-- White back -->
-    <a-obj-model src="ROOK" position="0 1 -3" scale="2 2 2"></a-obj-model>
+
+     <!-- ROOK A1-->
+    <a-obj-model src="#ROOK" position="-7 0.1 7" scale="0.1 0.1 0.1" color ="white"></a-obj-model>
+    <!-- ROOK H1-->
+    <a-obj-model src="#ROOK" position="7 0.1 7" scale="0.1 0.1 0.1" color ="white"></a-obj-model>
 
 
 
